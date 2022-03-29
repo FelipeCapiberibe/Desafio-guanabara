@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/* Escala de cores monocromaticas que eu usei nesse site
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); 
+@font-face {
+    font-family:'Android';
+    src: url('../pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root { /*Minha paleta de cores que eu posso usar de forma mais simples nos meus parâmetros CSS*/
+   --cor1: #c5ebd6;
+   --cor2: #83e1ad;
+   --cor3: #3ddc84;
+   --cor4: #2fa866;
+   --cor5: #1a5c37;
+   --cor6: #063d1e;
+   --font-padrao: Arial, Helvetica, sans-serif;
+   --font-destaque: 'Bebas', cursive; /*Fonte importada do site google font, o link lá acima*/
+   --font-android: 'Android', cursive;
+}
+* { /*Seletor com asteristico que é minha configuração global*/
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: var(--cor1);
+    font-family: var(--font-padrao);
+}
+a.externo::after {
+    content: '\00A0\1F517'; /*esse \00A0 é um espacamento */
+}
+header {
+    background-image: linear-gradient( to bottom, var(--cor3), var(--cor5)); 
+    text-align: center;
+    min-height: 150px; /*Altura Minima*/
+    padding-top: 40px;
+
+}
+header > h1 {
+    color: white;
+    font-family: var(--font-android);
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.486);
+}
+header > p {
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.486);
+    font-family: var(--font-destaque);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+} 
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.425);
+}
+nav > a {
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    text-decoration: none; /*Sublinhado*/
+    font-weight: bold;
+    transition-duration: 0.5s; /*quando passa o cursor por cima dos componentes da minha nav cria um efeito */
+}
+nav a:hover {
+    background-color: var(--cor4);
+    
+}
+main {
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+main h1 {
+    font-weight: normal;
+    color: var(--cor6);
+    font-family: var(--font-android);
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+}
+main h2 {
+    font-weight: normal;
+    color: var(--cor6);
+    font-size: 1.1em;
+    font-family: var(--font-android);
+    background-image: linear-gradient(to right, var(--cor2), transparent); /*Efeito de listra que fica transparente no final*/
+}
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px; /*Espaço no inicio do paragrafo*/
+    line-height: 20px;
+    font-size: 18px;
+
+}
+main strong {
+    color:var(--cor6);
+    background-color: rgb(214, 212, 212); 
+    font-weight: bold;
+    padding: 2px;
+}
+main a{
+    text-decoration: none; /*tirar o sublinhado*/
+    font-weight: bold;  /*Deixar em negrito*/
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+main img {
+    width: 100%;
+}
+main img.pequena{
+    max-width: 350px;
+    display: block; /*forma um bolo para poder mecher na margin da foto*/
+    margin: auto;
+}
+div.video{
+    background-color: white;
+    margin: 0px -20px 30px -20px;
+    padding: 20px; 
+    padding-bottom: 58%;
+    position: relative;
+}
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+aside {
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+    /*columns: 2; dividir o conteudo dentro em duas colunas*/
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.575);
+    
+
+}
+aside h3 {
+    color: white;
+    background-color: var(--cor5);
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 5px 5px 0px 0px;
+}
+aside > ul {
+    list-style-position: inside; /*Coloquei as bolinhas na parte de dentro do meu bloco*/
+    columns: 2;
+}
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font: 0.8em;
+    padding: 5px;
+}
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor3);
+
+}
